@@ -20,12 +20,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/afterloginstylesheet.css">
+  <link rel="stylesheet" href="css/profile.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/barba.min.js"></script>
+  <script type="text/javascript" src="scripts/logout.js"></script>
+  <script type="text/javascript" src="scripts/barbapageload.js"></script>
 </head>
 <body>
   <!---------------------------------------------------------navbar------------------------------------->
-
+<div id="barba-wrapper" class="wrapper">
+          <div class="barba-container">
   <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #ffffff">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -126,87 +132,7 @@
 </div>
 <!--------------------------------------------------------logout modal----------------------------------------->
 
-
+</div>
+</div>
 </body>
 </html>
-<style>
-.grid{
-  display: grid;
-  grid-template-columns: repeat(3,400px);
-  grid-auto-rows:380px;
-  grid-gap:80px 30px;
-  margin-left: 37px;
-  margin-top:50px;
-}
-.news-container{
-  transition: 0.5s;
-}
-.news-container:hover{
-  transform: scale(1.1,1.1);
-}
-.channel-name{
-  text-align: center;
-}
-.headline-image{
-  width: 360px !important;
-  height: 250px !important;
-}
-.news-desc{
-  top:264px;
-  width:100%;
-  height:112px;
-  background-color:white;
-  position: absolute;
-  text-align:justify;   
-}
-@media screen and (max-width: 992px) {
-    .grid{
-      grid-template-columns: repeat(3,400px);
-    }
-}
-@media screen and (max-width: 600px) {
-  .grid{
-    grid-template-columns: repeat(1,250px);
-    grid-gap: 70px;
-    margin-left: 50px;
-  }
-  .headline-image{
-    width:270px !important;
-    height:100px !important; 
-  }
-}
-html{
-    display: flex;
-    flex-flow: row nowrap;  
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    height:100%;
-}
-body 
-{
-    margin: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    width: 100%
-    max-width: 900px;
-    height: 100%;
-    max-height: 600px;
-    background-color: #f9f5f4
-}
-</style>
-<script>
-  var xhttp = new XMLHttpRequest();  
-  $("#logout").click(function(){
-  xhttp.open("POST", "afterlogin.php", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send("logout=true");
-  console.log("sent");
-  });
-  
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        window.location.assign("http://localhost/oep/home.php");
-    }
-  };
-</script>

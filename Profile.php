@@ -13,8 +13,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="barba.min.js"></script>
 </head>
 <body>
+  <div id="barba-wrapper" class="wrapper">
+          <div class="barba-container">
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #ffffff">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -78,7 +81,10 @@
         ?>
 
   </div>
-  </div> 
+  </div>
+ </div>
+</div>
+</div>  
 </body>
 </html>
 <style>
@@ -172,3 +178,36 @@ body{
 }  
 </style>
 
+<script>
+        /*      $('document').ready(function(){
+                var transEffect = Barba.BaseTransition.extend({
+                    start: function(){
+                      this.newContainerLoading.then(val => this.fadeInNewcontent($(this.newContainer)));
+                    },
+                    fadeInNewcontent: function(nc) {
+                      nc.hide();
+                      var _this = this;
+                      $(this.oldContainer).fadeOut(0).promise().done(() => {
+                        nc.css('visibility','visible');
+                        nc.fadeIn(0, function(){
+                          _this.done();
+                        })
+                      });
+                    }
+                });
+                Barba.Pjax.getTransition = function() {
+                  return transEffect;
+                }
+                Barba.Pjax.start();
+              });
+
+          var originalFn = Barba.Pjax.Dom.parseResponse;
+
+Barba.Pjax.Dom.parseResponse = function(response) {
+ // do your stuff with the response
+ console.log(response);
+ return originalFn.apply(Barba.Pjax.Dom, arguments);
+};    */
+
+
+      </script>

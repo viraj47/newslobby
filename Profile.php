@@ -2,7 +2,7 @@
   session_start();
   if(!isset(($_SESSION["useremail"])))
   {
-    header("Location:https://www.google.com/search?q=bunty+to+chutiya+hai&client=firefox-b-d&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiinPSm2NPgAhXJs48KHcEGDYsQ_AUIDygC&biw=1366&bih=654#imgrc=Qx3jKTvj_ddnAM:");
+    header("Location:http://localhost/oep/home.php");
     exit;
   }
 ?>
